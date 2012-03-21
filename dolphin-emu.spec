@@ -29,6 +29,7 @@ BuildRequires:	SDL-devel
 BuildRequires:	libxrandr-devel
 BuildRequires:	wxgtku2.8-devel
 BuildRequires:	pkgconfig(alsa)
+BuildRequires:	pkgconfig(xrender) >= 0.9.6
 
 %description
 Gamecube / Wii / Triforce Emulator.
