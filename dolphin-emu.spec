@@ -56,9 +56,8 @@ cd ..
 %__install -D -m 644 %{SOURCE10} %{buildroot}%{_iconsdir}/hicolor/128x128/apps/%{name}.png
 %__install -D -m 644 %{SOURCE9} %{buildroot}%{_iconsdir}/hicolor/256x256/apps/%{name}.png
 
-%__install -d %{buildroot}%{_desktopdir}
-
-%__cat > %{buildroot}%{_desktopdir}/%{name}.desktop << EOF
+%__install -d %{buildroot}%{_datadir}/applications
+%__cat > %{buildroot}%{_datadir}/applications/%{name}.desktop << EOF
 [Desktop Entry]
 Name=Dolphin-Emulator
 Comment=%{summary}
@@ -80,10 +79,6 @@ EOF
 %doc license.txt Readme.txt
 %attr(0755, root, root) %{_bindir}/%{name}
 %{_datadir}/%{name}
-%{_desktopdir}/%{name}.desktop
-%{_iconsdir}/hicolor/16x16/apps/%{name}.png
-%{_iconsdir}/hicolor/32x32/apps/%{name}.png
-%{_iconsdir}/hicolor/64x64/apps/%{name}.png
-%{_iconsdir}/hicolor/128x128/apps/%{name}.png
-%{_iconsdir}/hicolor/256x256/apps/%{name}.png
+%{_datadir}/applications/%{name}.desktop
+%{_iconsdir}/hicolor/*/apps/%{name}.png
 
