@@ -1,5 +1,5 @@
 Name:		dolphin-emu
-Version:	3.0.486
+Version:	3.0.766
 Release:	%mkrel 1
 Epoch:		1
 License:	GPLv2
