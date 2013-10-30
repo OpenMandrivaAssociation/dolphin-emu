@@ -1,8 +1,2 @@
 sources:
-  "dolphin-emu-128.png:"	1a823e8c44eb3b25b2e7fbb255ac7542558594dc
-  "dolphin-emu-16.png:"	945a2b2bc7a721dea05e4113b6191b4851ab549c
-  "dolphin-emu-256.png:"	f1e6dbc5f559755f573f3008d963bfd4dfca3d17
-  "dolphin-emu-3.0.766.tar.bz2:"	53a466eeb3a98b764aae32dfcf190d0839f7af2a
-  "dolphin-emu-3.0.802.tar.bz2:"	5b75f64d94eac7c867703566d37e541897d51d4d
-  "dolphin-emu-32.png:"	afa0aaae1c98d1b09ab988e27cd2f5c381eb326d
-  "dolphin-emu-64.png:"	abc8b62e8cbe72475eda8fb70d8a55ee61027d1a
+  dolphin-emu-4.0.1.tar.bz2: d711aaadcfd2c07a1976380e8da8c982e26f9426
