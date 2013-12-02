@@ -1,6 +1,6 @@
 Summary:	Gamecube / Wii / Triforce Emulator
 Name:		dolphin-emu
-Version:	4.0.1
+Version:	4.0.2
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -21,8 +21,7 @@ BuildRequires:	gomp-devel
 BuildRequires:	liblzo-devel
 BuildRequires:	polarssl-devel
 BuildRequires:	sfml-network-devel
-# Requires WxWidgets3, so builds internal copy
-#BuildRequires:	wxgtku2.8-devel
+BuildRequires:	wxgtku3.0-devel
 BuildRequires:	pkgconfig(ao)
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(bluez)
