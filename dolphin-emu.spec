@@ -1,6 +1,6 @@
 Name:		dolphin-emu
 Version:	3.0.802
-Release:	%mkrel 1
+Release:	2
 Epoch:		1
 License:	GPLv2
 Summary:	Gamecube / Wii / Triforce Emulator
