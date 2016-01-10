@@ -1,7 +1,7 @@
 Summary:	Gamecube / Wii / Triforce Emulator
 Name:		dolphin-emu
 Version:	4.0.2
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPLv2+
 Group:		Emulators
