@@ -14,6 +14,7 @@ Source11:	%{name}-64.png
 Source12:	%{name}-32.png
 Source13:	%{name}-16.png
 Patch0:		dolphin-emu-cmakepath.patch
+Patch1:		dolphin-emu-findx11.patch
 BuildRequires:	cmake
 BuildRequires:	git
 BuildRequires:	ffmpeg-devel
@@ -57,7 +58,7 @@ Gamecube / Wii / Triforce Emulator.
 
 %prep
 %setup -q
-%patch0 -p1
+%apply_patches
 
 %build
 mkdir -p build
