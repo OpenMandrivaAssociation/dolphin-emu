@@ -73,6 +73,9 @@ cmake -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr ..
 %install
 %makeinstall -C build
 
+# not wanted
+rm -f %{buildroot}/usr/lib/libpolarssl.a
+
 install -D -m 644 %{SOURCE13} %{buildroot}%{_iconsdir}/hicolor/16x16/apps/%{name}.png
 install -D -m 644 %{SOURCE12} %{buildroot}%{_iconsdir}/hicolor/32x32/apps/%{name}.png
 install -D -m 644 %{SOURCE11} %{buildroot}%{_iconsdir}/hicolor/64x64/apps/%{name}.png
