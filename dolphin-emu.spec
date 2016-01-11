@@ -19,10 +19,12 @@ BuildRequires:	cmake
 BuildRequires:	git
 BuildRequires:	ffmpeg-devel
 BuildRequires:	gomp-devel
-BuildRequires:	liblzo-devel
-BuildRequires:	polarssl-devel
+BuildRequires:	lzo-devel
+#Doesnt build with polarssl 1.3
+#BuildRequires:	polarssl-devel
 BuildRequires:	sfml-network-devel
 BuildRequires:	wxgtku3.0-devel
+BuildRequires:	miniupnpc-devel
 BuildRequires:	pkgconfig(ao)
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(bluez)
