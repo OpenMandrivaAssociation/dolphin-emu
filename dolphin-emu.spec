@@ -46,7 +46,7 @@ BuildRequires:	pkgconfig(soundtouch)
 BuildRequires:	pkgconfig(xi)
 BuildRequires:	pkgconfig(xrandr)
 BuildRequires:	pkgconfig(zlib)
-BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	qt5-devel
 
 %description
 Gamecube / Wii / Triforce Emulator.
