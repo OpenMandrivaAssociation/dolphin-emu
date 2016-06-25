@@ -1,20 +1,22 @@
+%define _disable_lto 1
+
 Summary:	Gamecube / Wii / Triforce Emulator
 Name:		dolphin-emu
-Version:	4.0.2
-Release:	3
+Version:	5.0
+Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Emulators
 Url:		http://www.dolphin-emu.com/
 # Fetched from git and cleaned up from useless junk
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	dolphin-%{version}.tar.gz
 Source9:	%{name}-256.png
 Source10:	%{name}-128.png
 Source11:	%{name}-64.png
 Source12:	%{name}-32.png
 Source13:	%{name}-16.png
-Patch0:		dolphin-emu-cmakepath.patch
-Patch1:		dolphin-emu-findx11.patch
+#Patch0:		dolphin-emu-cmakepath.patch
+#Patch1:		dolphin-emu-findx11.patch
 BuildRequires:	cmake
 BuildRequires:	git
 BuildRequires:	ffmpeg-devel
@@ -23,7 +25,6 @@ BuildRequires:	lzo-devel
 #Doesnt build with polarssl 1.3
 #BuildRequires:	polarssl-devel
 BuildRequires:	sfml-network-devel
-BuildRequires:	wxgtku3.0-devel
 BuildRequires:	miniupnpc-devel
 BuildRequires:	pkgconfig(ao)
 BuildRequires:	pkgconfig(alsa)
@@ -44,22 +45,26 @@ BuildRequires:	pkgconfig(soundtouch)
 BuildRequires:	pkgconfig(xi)
 BuildRequires:	pkgconfig(xrandr)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	pkgconfig(Qt5Widgets)
 
 %description
 Gamecube / Wii / Triforce Emulator.
 
 %files -f %{name}.lang
-%doc license.txt Readme.txt
-%attr(0755,root,root) %{_bindir}/%{name}
+%doc license.txt Readme.md
+%attr(0755,root,root) %{_bindir}/%{name}-qt2
+%attr(0755,root,root) %{_bindir}/%{name}-nogui
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_iconsdir}/hicolor/*/apps/%{name}.png
-%{_datadir}/pixmaps/%{name}.xpm
+%{_iconsdir}/hicolor/*/apps/%{name}.svg
+%{_mandir}/man6/dolphin-emu-nogui.*
+%{_mandir}/man6/dolphin-emu.*
 
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
+%setup -qn dolphin-%{version}
 %apply_patches
 
 %build
@@ -67,7 +72,7 @@ mkdir -p build
 cd build
 export CFLAGS='%{optflags} -O3'
 export CXXFLAGS='%{optflags} -O3'
-cmake -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr ..
+cmake -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr -DDISABLE_WX=1 -DENABLE_QT2=1 ..
 %make
 
 %install
@@ -87,7 +92,7 @@ cat > %{buildroot}%{_datadir}/applications/%{name}.desktop << EOF
 [Desktop Entry]
 Name=Dolphin-Emulator
 Comment=%{summary}
-Exec=%{_bindir}/%{name}
+Exec=%{_bindir}/%{name}-qt2
 Icon=%{name}
 Terminal=false
 Type=Application
@@ -95,5 +100,5 @@ StartupNotify=true
 Categories=Game;Emulator;
 EOF
 
-%find_lang %{name}
+#find_lang %{name}
 

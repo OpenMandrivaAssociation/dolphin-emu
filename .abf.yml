@@ -1,2 +1,7 @@
 sources:
-  dolphin-emu-4.0.2.tar.bz2: d82654cc0e8f17ddaaba08a59912a41e8d3461bf
+  dolphin-5.0.tar.gz: 6553f9fe5281326b86f33fb6b99a93fe6a8820af
+  dolphin-emu-128.png: 1a823e8c44eb3b25b2e7fbb255ac7542558594dc
+  dolphin-emu-16.png: 945a2b2bc7a721dea05e4113b6191b4851ab549c
+  dolphin-emu-256.png: f1e6dbc5f559755f573f3008d963bfd4dfca3d17
+  dolphin-emu-32.png: afa0aaae1c98d1b09ab988e27cd2f5c381eb326d
+  dolphin-emu-64.png: abc8b62e8cbe72475eda8fb70d8a55ee61027d1a
