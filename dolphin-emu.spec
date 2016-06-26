@@ -73,7 +73,11 @@ mkdir -p build
 cd build
 export CFLAGS='%{optflags} -O3'
 export CXXFLAGS='%{optflags} -O3'
-cmake -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr -DDISABLE_WX=1 -DENABLE_QT2=1 ..
+cmake -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr  \
+%ifarch %ix86 %arm
+	-DENABLE_GENERIC=1 \
+%endif
+	-DDISABLE_WX=1 -DENABLE_QT2=1 ..
 %make
 
 %install
