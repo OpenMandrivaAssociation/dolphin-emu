@@ -51,7 +51,7 @@ BuildRequires:	qt5-devel
 %description
 Gamecube / Wii / Triforce Emulator.
 
-%files -f %{name}.lang
+%files
 %doc license.txt Readme.md
 %attr(0755,root,root) %{_bindir}/%{name}-qt2
 %attr(0755,root,root) %{_bindir}/%{name}-nogui
