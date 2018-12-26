@@ -47,6 +47,8 @@ BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(libevdev)
 BuildRequires:  pkgconfig(libudev)
+BuildRequires:  pkgconfig(libcurl)
+BuildRequires:  qmake5
 
 %description
 Gamecube / Wii / Triforce Emulator.
