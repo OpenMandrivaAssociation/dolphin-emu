@@ -3,8 +3,7 @@
 Summary:	Gamecube / Wii / Triforce Emulator
 Name:		dolphin-emu
 Version:	5.0
-Release:	1
-Epoch:		1
+Release:	2
 License:	GPLv2+
 Group:		Emulators
 Url:		http://www.dolphin-emu.com/
@@ -46,6 +45,7 @@ BuildRequires:	pkgconfig(xi)
 BuildRequires:	pkgconfig(xrandr)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:  pkgconfig(libevdev)
 
 %description
 Gamecube / Wii / Triforce Emulator.
