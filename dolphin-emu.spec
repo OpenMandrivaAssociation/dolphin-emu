@@ -65,7 +65,7 @@ Gamecube / Wii / Triforce Emulator.
 
 %prep
 %setup -qn dolphin-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 mkdir -p build
