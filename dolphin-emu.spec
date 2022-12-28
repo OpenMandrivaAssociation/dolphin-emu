@@ -1,21 +1,20 @@
 %define _disable_lto 1
-
+%define git 20221227
 Summary:	Gamecube / Wii / Triforce Emulator
 Name:		dolphin-emu
-Version:	5.0
-Release:	2
+Version:	5.0.%{git}
+Release:	1
 License:	GPLv2+
 Group:		Emulators
 Url:		http://www.dolphin-emu.com/
 # Fetched from git and cleaned up from useless junk
-Source0:	dolphin-%{version}.tar.gz
+Source0:	dolphin-%{git}.tar.xz
 Source9:	%{name}-256.png
 Source10:	%{name}-128.png
 Source11:	%{name}-64.png
 Source12:	%{name}-32.png
 Source13:	%{name}-16.png
-#Patch0:		dolphin-emu-cmakepath.patch
-#Patch1:		dolphin-emu-findx11.patch
+
 BuildRequires:	cmake
 BuildRequires:	git
 BuildRequires:	ffmpeg-devel
@@ -67,15 +66,14 @@ Gamecube / Wii / Triforce Emulator.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -qn dolphin-%{version}
-%apply_patches
+%autosetup dolphin-%{git} -p1
 
 %build
 mkdir -p build
 cd build
 export CFLAGS='%{optflags} -O3'
 export CXXFLAGS='%{optflags} -O3'
-cmake -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr -DDISABLE_WX=1 -DENABLE_QT2=1 ..
+%cmake -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr -DDISABLE_WX=1 -DENABLE_QT2=1 ..
 %make
 
 %install
