@@ -69,8 +69,8 @@ Gamecube / Wii / Triforce Emulator.
 %autosetup -n dolphin-%{git} -p1
 
 %build
-mkdir -p build
-cd build
+#mkdir -p build
+#cd build
 export CFLAGS='%{optflags} -O3'
 export CXXFLAGS='%{optflags} -O3'
 %cmake -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr -DDISABLE_WX=1 -DENABLE_QT2=1 ..
