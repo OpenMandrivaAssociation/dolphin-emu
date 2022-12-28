@@ -66,7 +66,7 @@ Gamecube / Wii / Triforce Emulator.
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup dolphin-%{git} -p1
+%autosetup -n dolphin-%{git} -p1
 
 %build
 mkdir -p build
