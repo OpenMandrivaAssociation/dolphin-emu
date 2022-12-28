@@ -73,11 +73,11 @@ Gamecube / Wii / Triforce Emulator.
 #cd build
 export CFLAGS='%{optflags} -O3'
 export CXXFLAGS='%{optflags} -O3'
-%cmake -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr -DDISABLE_WX=1 -DENABLE_QT2=1 ..
+%cmake
 %make
 
 %install
-%makeinstall -C build
+%make_install -C build
 
 # not wanted
 rm -f %{buildroot}/usr/lib/libpolarssl.a
