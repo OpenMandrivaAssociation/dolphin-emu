@@ -7,7 +7,7 @@ Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Emulators
-Url:		http://www.dolphin-emu.com/
+Url:		https://www.dolphin-emu.com/
 # Fetched from git and cleaned up from useless junk
 Source0:	dolphin-%{version}.tar.gz
 Source9:	%{name}-256.png
